@@ -1,0 +1,9 @@
+.page {
+  display: flex;
+  text-align: center;
+  min-height: 100vh;
+  background-size: 200% 100%;
+  transition: 2s;
+  max-width: 100vw;
+  position: relative;
+}

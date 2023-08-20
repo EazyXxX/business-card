@@ -1,0 +1,10 @@
+.app {
+  text-align: center;
+  min-height: 100vh;
+  background-size: 200% 100%;
+  transition: 2s;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
