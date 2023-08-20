@@ -5,4 +5,11 @@
 @import url('./css-blocks/header/name/header__name.css');
 @import url('./css-blocks/header/photo/header__photo.css');
 @import url('./css-blocks//header/container/header__container.css');
-
+@import url('./css-blocks/app/__color/_type/app__color_type_cyan-pink.css');
+@import url('./css-blocks/app/__color/_type/app__color_type_cyan-purple.css');
+@import url('./css-blocks/app/__color/_type/app__color_type_cyan-yellow.css');
+@import url('./css-blocks/app/__color/_type/app__color_type_blue-red.css');
+@import url('./css-blocks/app/__color/_type/app__color_type_green-blue.css');
+@import url('./css-blocks/app/__color/_type/app__color_type_pink-yellow.css');
+@import url('./css-blocks/app/__color/_type/app__color_type_red-green.css');
+@import url('./css-blocks/app/__color/_type/app__color_type_active.css');

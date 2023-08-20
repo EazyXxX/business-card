@@ -1,0 +1,33 @@
+.app__color_type_cyan-yellow {
+  text-align: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(
+    -45deg,
+    rgb(8, 199, 233),
+    rgba(8, 233, 139, 0.745),
+    rgba(30, 238, 11, 0.918),
+    rgba(110, 236, 7, 0.761),
+    rgb(221, 236, 13)
+  );
+  animation: gradient 15s ease infinite;
+  min-height: 100vh;
+  background-size: 200% 100%;
+  transition: 10s linear;
+  transition-property: opacity;
+  opacity: 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
