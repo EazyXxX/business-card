@@ -1,0 +1,14 @@
+.my-projects {
+  border-radius: 6px;
+}
+
+@media screen and (max-width: 800px) {
+  .my-projects {
+    margin: 20px auto 20px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(0, 0, 0, 0.5);
+    border-radius: 6px;
+    max-width: 82vw;
+  }
+}

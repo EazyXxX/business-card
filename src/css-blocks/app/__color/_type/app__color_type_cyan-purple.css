@@ -1,12 +1,7 @@
 .app__color_type_cyan-purple {
   text-align: center;
-  position: absolute;
   width: 100vw;
-  height: 100vh;
   z-index: -1;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
   z-index: -1;
   background: linear-gradient(
     -45deg,

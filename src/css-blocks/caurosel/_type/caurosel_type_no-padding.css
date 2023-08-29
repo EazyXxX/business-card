@@ -1,0 +1,13 @@
+.caurosel_type_no-padding {
+  padding-bottom: 20px;
+  margin-right: 0;
+  margin: auto auto auto auto;
+}
+
+@media screen and (max-width: 920px) {
+  .caurosel_type_no-padding {
+    padding-bottom: 0;
+    margin-right: auto;
+    margin: auto;
+  }
+}

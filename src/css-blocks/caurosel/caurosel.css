@@ -1,0 +1,17 @@
+.caurosel {
+  width: 310px;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 920px) {
+  .caurosel {
+    padding-bottom: 22px;
+    width: 100%;
+  }
+}

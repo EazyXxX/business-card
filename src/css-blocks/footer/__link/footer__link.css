@@ -1,0 +1,29 @@
+.footer__link {
+  max-width: 100px;
+  max-height: 100px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  transition: .1s;
+}
+
+.footer__link:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  transition: .1s;
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 800px) {
+  .footer__link {
+  max-width: 200px;
+  max-height: 200px;
+  display: flex;
+  border: 2px solid rgba(69, 123, 224, 0.658);
+  border-radius: 4px;
+  }
+}
