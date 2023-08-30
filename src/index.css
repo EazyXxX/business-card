@@ -52,4 +52,6 @@
 @import url("./css-blocks/caurosel/__chevron/_type/caurosel__chevron_type_prev.css");
 @import url("./css-blocks/about-me/_type/about-me_type-no-list.css");
 @import url("./css-blocks/about-me/__title/_type/about-me__title_type_fat.css");
+@import url("./css-blocks/about-me/__flex-div/about-me__flex-div.css");
+@import url("./css-blocks/caurosel/_type/caurosel_type_visible.css");
 

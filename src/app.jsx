@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import "./index.css";
 import meOne from "./images/me.png";
-import meTwo from "./images/hills.png"
-import meThree from "./images/rocks.png"
+import meTwo from "./images/hills.png";
+import meThree from "./images/rocks.png";
 import GradientFlow from "./components/GradientFlow.js";
 import AboutMe from "./components/AboutMe";
 import MyProjects from "./components/MyProjects";
@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate, Route, Routes } from "react-router-dom";
-import SecondSlider from "./components/SecondSlider";
+import FirstSlider from "./components/FirstSlider";
 
 function App() {
   const navigate = useNavigate();
@@ -112,7 +112,10 @@ function App() {
           Welcome to my business-card web page:
         </h1>
         <div className="header__case">
-        <SecondSlider noPadding={true} className="header__photo" elements={mes} />
+          <FirstSlider
+            className="header__photo"
+            elements={mes}
+          />
           <article className="header__container">
             <h2 className="header__name">Oleg Ostanin</h2>
             <h3 className="header__subname">web-developer</h3>

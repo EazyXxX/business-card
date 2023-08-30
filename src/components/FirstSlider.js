@@ -9,9 +9,9 @@ import "swiper/css/scrollbar";
 import right from "../images/right.png";
 import left from "../images/left.png";
 
-function SecondSlider(elements) {
+function FirstSlider(elements) {
   return (
-    <div className="caurosel caurosel_type_no-padding">
+    <div className={`caurosel caurosel_type_visible`}>
       <img
         src={left}
         className="caurosel__chevron_type_prev"
@@ -42,4 +42,4 @@ function SecondSlider(elements) {
   );
 }
 
-export default SecondSlider;
+export default FirstSlider;

@@ -1,74 +1,76 @@
 import "../index.css";
 import SecondSlider from "./SecondSlider";
-import moviesTwoMobile from "../images/movies-mobile-two.png";
-import moviesThreeMobile from "../images/movies-mobile-three.png";
-import moviesFourMobile from "../images/movies-mobile-four.png";
-import mestoOneMobile from "../images/mesto-mobile-one.png";
-import mestoTwoMobile from "../images/mesto-mobile-two.png";
-import mestoThreeMobile from "../images/mesto-mobile-three.png";
-import russiaTravelOneMobile from "../images/russia-travel-one-mobile.png";
-import russiaTravelTwoMobile from "../images/russia-travel-two-mobile.png";
-import russiaTravelThreeMobile from "../images/russia-travel-three-mobile.png";
+import bigMoviesOne from "../images/movies-one.png";
+import bigMoviesTwo from "../images/movies-two.png";
+import bigMoviesThree from "../images/movies-three.png";
+import bigMestoOne from "../images/mesto-one.png";
+import bigMestoTwo from "../images/mesto-two.png";
+import bigMestoThree from "../images/mesto-three.png";
+import bigRussiaTravelOne from "../images/russia-one.png";
+import bigRussiaTravelTwo from "../images/russia-two.png";
+import bigRussiaTravelThree from "../images/russia-three.png";
 
 import { useState } from "react";
 
 function MyProjects() {
-  const [movies, setMovies] = useState([
+  const [bigMovies, setBigMovies] = useState([
     <img
       className="caurosel__image"
       alt="a screenshot from movies-explorer web-page"
-      src={moviesFourMobile}
+      src={bigMoviesOne}
     />,
     <img
       className="caurosel__image"
       alt="a screenshot from movies-explorer web-page"
-      src={moviesTwoMobile}
+      src={bigMoviesTwo}
     />,
     <img
       className="caurosel__image"
       alt="a screenshot from movies-explorer web-page"
-      src={moviesThreeMobile}
+      src={bigMoviesThree}
     />,
   ]);
-  const [mestos, setMestos] = useState([
+  const [bigMestos, setBigMestos] = useState([
     <img
       className="caurosel__image"
-      alt="a screenshot from mesto web-page"
-      src={mestoTwoMobile}
+      alt="a screenshot from movies-explorer web-page"
+      src={bigMestoOne}
     />,
     <img
       className="caurosel__image"
-      alt="a screenshot from mesto web-page"
-      src={mestoOneMobile}
+      alt="a screenshot from movies-explorer web-page"
+      src={bigMestoTwo}
     />,
     <img
       className="caurosel__image"
-      alt="a screenshot from mesto web-page"
-      src={mestoThreeMobile}
+      alt="a screenshot from movies-explorer web-page"
+      src={bigMestoThree}
     />,
   ]);
-  const [russias, setRussias] = useState([
+  const [bigRussias, setBigRussias] = useState([
     <img
       className="caurosel__image"
-      alt="a screenshot from russian-travel web-page"
-      src={russiaTravelOneMobile}
+      alt="a screenshot from movies-explorer web-page"
+      src={bigRussiaTravelOne}
     />,
     <img
       className="caurosel__image"
-      alt="a screenshot from russian-travel web-page"
-      src={russiaTravelTwoMobile}
+      alt="a screenshot from movies-explorer web-page"
+      src={bigRussiaTravelTwo}
     />,
     <img
       className="caurosel__image"
-      alt="a screenshot from russian-travel web-page"
-      src={russiaTravelThreeMobile}
+      alt="a screenshot from movies-explorer web-page"
+      src={bigRussiaTravelThree}
     />,
   ]);
   return (
     <section>
       <ul className="about-me__list">
         <li className="about-me about-me_type_no-list">
-          <h3 className="about-me__title about-me__title_type_fat">Movies explorer</h3>
+          <h3 className="about-me__title about-me__title_type_fat">
+            Movies explorer
+          </h3>
           <p className="about-me__text">
             Movies explorer is a search engine for various arthouse films. There
             you can choose which of the film cards you can add to the "saved"
@@ -94,7 +96,10 @@ function MyProjects() {
             </a>
           </p>
           <p className="about-me__text_type_small">Screenshots:</p>
-          <SecondSlider noPadding={true} elements={movies} />
+          <SecondSlider
+            noPadding={true}
+            elements={bigMovies}
+          />
         </li>
         <li className="about-me about-me_type_no-list">
           <h3 className="about-me__title about-me__title_type_fat">Mesto</h3>
@@ -131,10 +136,15 @@ function MyProjects() {
             </a>
           </p>
           <p className="about-me__text_type_small">Screenshots:</p>
-          <SecondSlider noPadding={true} elements={mestos} />
+          <SecondSlider
+            noPadding={true}
+            elements={bigMestos}
+          />
         </li>
         <li className="about-me about-me_type_no-list">
-          <h3 className="about-me__title about-me__title_type_fat">Russian travel</h3>
+          <h3 className="about-me__title about-me__title_type_fat">
+            Russian travel
+          </h3>
           <p className="about-me__text">
             This is my very first web project. At its core, this is just an
             adaptive landing page without any scripts. Pure CSS. With it's help,
@@ -154,7 +164,10 @@ function MyProjects() {
             </a>
           </p>
           <p className="about-me__text_type_small">Screenshots:</p>
-          <SecondSlider noPadding={true} elements={russias}></SecondSlider>
+          <SecondSlider
+            noPadding={true}
+            elements={bigRussias}
+          />
         </li>
       </ul>
     </section>

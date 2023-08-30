@@ -1,13 +1,26 @@
 .caurosel_type_no-padding {
   padding-bottom: 20px;
-  margin-right: 0;
-  margin: auto auto auto auto;
+  margin: 0 auto 0 auto;
+  max-width: 90%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 @media screen and (max-width: 920px) {
   .caurosel_type_no-padding {
-    padding-bottom: 0;
-    margin-right: auto;
     margin: auto;
+    padding-bottom: 22px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .caurosel_type_no-padding {
+    margin: auto;
+    padding-bottom: 22px;
   }
 }
