@@ -5,6 +5,11 @@
   display: flex;
   justify-content: center;
   font-size: 21px;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+  -ms-user-select: text;
+  -o-user-select: text;
+  user-select: text;
 }
 
 .footer__text:last-child {

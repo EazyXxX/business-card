@@ -2,10 +2,12 @@ import "../index.css";
 import telegram from "../images/telegram_transparent.png";
 import linkedin from "../images/linkedin.png";
 
-function Footer() {
+function Footer({language}) {
   return (
     <footer className="footer">
-      <h2 className="footer__message">Contact me if you like my profile</h2>
+      <h2 className="footer__message">{`${
+          language ? "Contact me if you like my profile" : "Свяжитесь со мной, если вам понравился мой профиль"
+        }`}</h2>
       <div className="footer__container">
         <a
           rel="noreferrer"
@@ -14,7 +16,9 @@ function Footer() {
           target="_blank"
         >
           <img className="footer__image" src={telegram} alt="Telegram logo" />{" "}
-          <p className="footer__text">Telegram</p>
+          <p className="footer__text">{`${
+          language ? "Telegram" : "Телеграм"
+        }`}</p>
         </a>
         <a
           rel="noreferrer"
@@ -26,7 +30,9 @@ function Footer() {
           <p className="footer__text">LinkedIn</p>
         </a>
       </div>
-      <p className="footer__text">e-mail: ostanin.ol2@gmail.com</p>
+      <p className="footer__text">{`${
+          language ? "e-mail: ostanin.ol2@gmail.com" : "эл. почта: ostanin.ol2@gmail.com"
+        }`}</p>
     </footer>
   );
 }

@@ -29,7 +29,6 @@
 @import url("./css-blocks/my-projects/my-projects.css");
 @import url("./css-blocks/my-projects/__title/my-projects__title.css");
 @import url("./css-blocks/my-projects/__text/my-projects__text.css");
-@import url("./css-blocks/contact-info/contact-info.css");
 @import url("./css-blocks/about-me/__list/about-me__list.css");
 @import url("./css-blocks/about-me/__link/about-me__link.css");
 @import url("./css-blocks/about-me/__text/_type/about-me__text_type_small.css");
@@ -54,4 +53,7 @@
 @import url("./css-blocks/about-me/__title/_type/about-me__title_type_fat.css");
 @import url("./css-blocks/about-me/__flex-div/about-me__flex-div.css");
 @import url("./css-blocks/caurosel/_type/caurosel_type_visible.css");
-
+@import url("./css-blocks/header/__button/header__button.css");
+@import url("./css-blocks/header/__language-box/header__language-box.css");
+@import url("./css-blocks/header/__button/_type/header__button_type_underlined.css");
+@import url("./css-blocks/header/__button/_type/header__button_type_active.css");

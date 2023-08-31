@@ -15,4 +15,9 @@
     display: hidden;
     visibility: hidden;
   }
+
+  .caurosel__chevron_type_next:hover {
+    opacity: none;
+    transition: none;
+  }
 }

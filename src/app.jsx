@@ -17,8 +17,7 @@ function App() {
   const [headerTopOpacity, setHeaderTopOpacity] = useState(false);
   const [navAboutMeLocation, setNavAboutMeLocation] = useState(true);
   const [navMyProjectsLocation, setNavMyProjectsLocation] = useState(false);
-  const [navContactInfoLocation, setNavContactInfoLocation] = useState(false);
-
+  const [language, setLanguage] = useState(true);
   const [mes, setMes] = useState([
     <img
       className="caurosel__image caurosel__image_type_big"
@@ -40,59 +39,21 @@ function App() {
   function handleAboutMeClick() {
     setNavAboutMeLocation(true);
     setNavMyProjectsLocation(false);
-    setNavContactInfoLocation(false);
-    window.localStorage.setItem(
-      "navAboutMeLocation",
-      JSON.stringify(navAboutMeLocation)
-    );
-    window.localStorage.setItem(
-      "navMyProjectsLocation",
-      JSON.stringify(navMyProjectsLocation)
-    );
-    window.localStorage.setItem(
-      "navContactInfoLocation",
-      JSON.stringify(navContactInfoLocation)
-    );
   }
-
   function handleMyProjectsClick() {
     setNavAboutMeLocation(false);
     setNavMyProjectsLocation(true);
-    setNavContactInfoLocation(false);
-    window.localStorage.setItem(
-      "navAboutMeLocation",
-      JSON.stringify(navAboutMeLocation)
-    );
-    window.localStorage.setItem(
-      "navMyProjectsLocation",
-      JSON.stringify(navMyProjectsLocation)
-    );
-    window.localStorage.setItem(
-      "navContactInfoLocation",
-      JSON.stringify(navContactInfoLocation)
-    );
-  }
-
-  function handleContactInfoClick() {
-    setNavAboutMeLocation(false);
-    setNavMyProjectsLocation(false);
-    setNavContactInfoLocation(true);
-    window.localStorage.setItem(
-      "navAboutMeLocation",
-      JSON.stringify(navAboutMeLocation)
-    );
-    window.localStorage.setItem(
-      "navMyProjectsLocation",
-      JSON.stringify(navMyProjectsLocation)
-    );
-    window.localStorage.setItem(
-      "navContactInfoLocation",
-      JSON.stringify(navContactInfoLocation)
-    );
   }
 
   function setHeaderTopActive() {
     setHeaderTopOpacity(true);
+  }
+
+  function handleClickRussian() {
+    setLanguage(false);
+  }
+  function handleClickEnglish() {
+    setLanguage(true);
   }
 
   useEffect(setHeaderTopActive, []);
@@ -109,32 +70,83 @@ function App() {
             headerTopOpacity ? "header__top_type_active" : ""
           }`}
         >
-          Welcome to my business-card web page:
+          {`${
+            language
+              ? "Welcome to my CV web page:"
+              : "Добро пожаловать в моё веб-резюме:"
+          }`}
         </h1>
         <div className="header__case">
-          <FirstSlider
-            className="header__photo"
-            elements={mes}
-          />
+          <div className="header__language-box">
+            <button
+              onClick={handleClickRussian}
+              className={`header__button ${
+                language ? "" : "header__button_type_underlined"
+              } ${headerTopOpacity ? "header__button_type_active" : ""}`}
+            >
+              Ru
+            </button>
+            <button
+              onClick={handleClickEnglish}
+              className={`header__button ${
+                language ? "header__button_type_underlined" : ""
+              } ${headerTopOpacity ? "header__button_type_active" : ""}`}
+            >
+              En
+            </button>
+          </div>
+          <FirstSlider className="header__photo" elements={mes} />
           <article className="header__container">
-            <h2 className="header__name">Oleg Ostanin</h2>
-            <h3 className="header__subname">web-developer</h3>
+            <h2 className="header__name">{`${
+              language ? "Oleg Ostanin" : "Олег Останин"
+            }`}</h2>
+            <h3 className="header__subname">{`${
+              language ? "web-developer" : "веб-разработчик"
+            }`}</h3>
             <div className="header__info">
-              <p className="header__text">Age: 24</p>
-              <p className="header__text">Location: Russia, Rostov-on-Don</p>
-              <p className="header__text">Occupation: unepmployed</p>
-              <p className="header__text header__text_type_underlined">
-                Relocation preference: willing to relocate
+              <p className="header__text">
+                {" "}
+                {`${language ? "Age: 24" : "Возраст: 24"}`}
+              </p>
+              <p className="header__text">{`${
+                language
+                  ? "Location: Russia, Rostov-on-Don"
+                  : "Местонахождение: Россия, Ростов-на-Дону"
+              }`}</p>
+              <p className="header__text">{`${
+                language ? "Occupation: unepmployed" : "Занятость: безработный"
+              }`}</p>
+              <p
+                className={`header__text ${
+                  language ? "header__text_type_underlined" : ""
+                }`}
+              >
+                {`${
+                  language
+                    ? "Relocation preference: willing to relocate"
+                    : "Переезд: готов к переезду"
+                }`}
               </p>
               <p className="header__text">
-                Languages: English - C1, Russian - native
+                {`${
+                  language
+                    ? "Languages: English - C1, Russian - native"
+                    : "Языки: Английский - C1, Русский - родной"
+                }`}
               </p>
               <p className="header__text">
-                Core skills: HTML, CSS, JavaScript, React
+                {`${
+                  language
+                    ? "Core skills: HTML, CSS, JavaScript, React, NodeJS"
+                    : "Ключевые навыки: HTML, CSS, JavaScript, React, NodeJS"
+                }`}
               </p>
               <p className="header__text">
-                Core principles: be agile; don't hesitate to ask for help; talk
-                to customers; teamwork tendency; learning on a daily basis
+                {`${
+                  language
+                    ? "Core principles: be agile; don't hesitate to ask for help; talk to customers; teamwork tendency; learning on a daily basis"
+                    : "Личностные качества: гибкое мышление; не стесняюсь задавать вопросы; люблю общаться с людьми; склонен к командной работе; обучаюсь новому ежедневно"
+                }`}
               </p>
             </div>
           </article>
@@ -148,7 +160,7 @@ function App() {
           to="/about-me"
           onClick={handleAboutMeClick}
         >
-          About me
+          {`${language ? "About me" : "Обо мне"}`}
         </Link>
         <Link
           className={`navbar__selector ${
@@ -157,14 +169,17 @@ function App() {
           to="/my-projects"
           onClick={handleMyProjectsClick}
         >
-          My projects
+          {`${language ? "My projects" : "Мои проекты"}`}
         </Link>
       </nav>
       <Routes>
-        <Route path="/about-me" element={<AboutMe />} />
-        <Route path="/my-projects" element={<MyProjects />} />
+        <Route path="/about-me" element={<AboutMe language={language} />} />
+        <Route
+          path="/my-projects"
+          element={<MyProjects language={language} />}
+        />
       </Routes>
-      <Footer />
+      <Footer language={language} />
     </div>
   );
 }
