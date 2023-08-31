@@ -9,11 +9,10 @@ import MyProjects from "./components/MyProjects";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useNavigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import FirstSlider from "./components/FirstSlider";
 
 function App() {
-  const navigate = useNavigate();
   const [headerTopOpacity, setHeaderTopOpacity] = useState(false);
   const [navAboutMeLocation, setNavAboutMeLocation] = useState(true);
   const [navMyProjectsLocation, setNavMyProjectsLocation] = useState(false);
@@ -39,10 +38,14 @@ function App() {
   function handleAboutMeClick() {
     setNavAboutMeLocation(true);
     setNavMyProjectsLocation(false);
+    window.localStorage.setItem("aboutMe", true);
+    window.localStorage.setItem("myProjects", false);
   }
   function handleMyProjectsClick() {
     setNavAboutMeLocation(false);
     setNavMyProjectsLocation(true);
+    window.localStorage.setItem("aboutMe", false);
+    window.localStorage.setItem("myProjects", true);
   }
 
   function setHeaderTopActive() {
@@ -51,14 +54,18 @@ function App() {
 
   function handleClickRussian() {
     setLanguage(false);
+    window.localStorage.setItem("language", false);
   }
   function handleClickEnglish() {
     setLanguage(true);
+    window.localStorage.setItem("language", true);
   }
 
   useEffect(setHeaderTopActive, []);
   useEffect(() => {
-    navigate("/about-me");
+    setLanguage(JSON.parse(window.localStorage.getItem("language")));
+    setNavAboutMeLocation(JSON.parse(window.localStorage.getItem("aboutMe")));
+    setNavMyProjectsLocation(JSON.parse(window.localStorage.getItem("myProjects")));
   }, []);
 
   return (
