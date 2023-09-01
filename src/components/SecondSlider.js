@@ -10,8 +10,13 @@ import right from "../images/right.png";
 import left from "../images/left.png";
 
 function SecondSlider(elements) {
+  const MOBILE_WIDTH = 800;
   return (
-    <div className="caurosel caurosel_type_no-padding">
+    <div
+      className={`caurosel caurosel_type_no-padding ${
+        window.innerWidth < MOBILE_WIDTH ? "caurosel_type_mobile" : ""
+      }`}
+    >
       <img
         src={left}
         className="caurosel__chevron_type_prev"

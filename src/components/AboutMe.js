@@ -5,7 +5,7 @@ function AboutMe({ language }) {
     <section>
       <article className="about-me">
         <h2 className="about-me__title">{`${
-          language ? "My Skills:" : "Мои навыки"
+          language ? "My Skills:" : "Мои навыки:"
         }`}</h2>
         <ul className="about-me__list">
           <li className="about-me__text_type_small">HTML, CSS + SASS, LESS</li>

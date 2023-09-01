@@ -3,67 +3,151 @@ import SecondSlider from "./SecondSlider";
 import bigMoviesOne from "../images/movies-one.png";
 import bigMoviesTwo from "../images/movies-two.png";
 import bigMoviesThree from "../images/movies-three.png";
+import moviesOne from "../images/movies-one-mobile.png";
+import moviesTwo from "../images/movies-two-mobile.png";
+import moviesThree from "../images/movies-three-mobile.png";
+
 import bigMestoOne from "../images/mesto-one.png";
 import bigMestoTwo from "../images/mesto-two.png";
 import bigMestoThree from "../images/mesto-three.png";
+import mestoOne from "../images/mesto-one-mobile.png";
+import mestoTwo from "../images/mesto-two-mobile.png";
+import mestoThree from "../images/mesto-three-mobile.png";
+
 import bigRussiaTravelOne from "../images/russia-one.png";
 import bigRussiaTravelTwo from "../images/russia-two.png";
 import bigRussiaTravelThree from "../images/russia-three.png";
+import russiaTravelOne from "../images/russia-one-mobile.png";
+import russiaTravelTwo from "../images/russia-two-mobile.png";
+import russiaTravelThree from "../images/russia-three-mobile.png";
 
 import { useState } from "react";
 
-function MyProjects({ language }) {
+function MyProjects({ language, mobile }) {
   const [bigMovies, setBigMovies] = useState([
-    <img
-      className="caurosel__image"
-      alt="a screenshot from movies-explorer web-page"
-      src={bigMoviesOne}
-    />,
-    <img
-      className="caurosel__image"
-      alt="a screenshot from movies-explorer web-page"
-      src={bigMoviesTwo}
-    />,
-    <img
-      className="caurosel__image"
-      alt="a screenshot from movies-explorer web-page"
-      src={bigMoviesThree}
-    />,
+    window.innerWidth < mobile ? (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from movies-explorer web-page"
+        src={moviesOne}
+      />
+    ) : (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from movies-explorer web-page"
+        src={bigMoviesOne}
+      />
+    ),
+    window.innerWidth < mobile ? (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from movies-explorer web-page"
+        src={moviesTwo}
+      />
+    ) : (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from movies-explorer web-page"
+        src={bigMoviesTwo}
+      />
+    ),
+    window.innerWidth < mobile ? (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from movies-explorer web-page"
+        src={moviesThree}
+      />
+    ) : (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from movies-explorer web-page"
+        src={bigMoviesThree}
+      />
+    ),
   ]);
   const [bigMestos, setBigMestos] = useState([
-    <img
-      className="caurosel__image"
-      alt="a screenshot from movies-explorer web-page"
-      src={bigMestoOne}
-    />,
-    <img
-      className="caurosel__image"
-      alt="a screenshot from movies-explorer web-page"
-      src={bigMestoTwo}
-    />,
-    <img
-      className="caurosel__image"
-      alt="a screenshot from movies-explorer web-page"
-      src={bigMestoThree}
-    />,
+    window.innerWidth < mobile ? (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from mesto web-page"
+        src={mestoOne}
+      />
+    ) : (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from mesto web-page"
+        src={bigMestoOne}
+      />
+    ),
+    window.innerWidth < mobile ? (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from mesto web-page"
+        src={mestoTwo}
+      />
+    ) : (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from mesto web-page"
+        src={bigMestoTwo}
+      />
+    ),
+    window.innerWidth < mobile ? (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from mesto web-page"
+        src={mestoThree}
+      />
+    ) : (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from mesto web-page"
+        src={bigMestoThree}
+      />
+    ),
   ]);
   const [bigRussias, setBigRussias] = useState([
-    <img
-      className="caurosel__image"
-      alt="a screenshot from movies-explorer web-page"
-      src={bigRussiaTravelOne}
-    />,
-    <img
-      className="caurosel__image"
-      alt="a screenshot from movies-explorer web-page"
-      src={bigRussiaTravelTwo}
-    />,
-    <img
-      className="caurosel__image"
-      alt="a screenshot from movies-explorer web-page"
-      src={bigRussiaTravelThree}
-    />,
+    window.innerWidth < mobile ? (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from russian-travel web-page"
+        src={russiaTravelOne}
+      />
+    ) : (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from russian-travel web-page"
+        src={bigRussiaTravelOne}
+      />
+    ),
+    window.innerWidth < mobile ? (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from russian-travel web-page"
+        src={russiaTravelTwo}
+      />
+    ) : (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from russian-travel web-page"
+        src={bigRussiaTravelTwo}
+      />
+    ),
+    window.innerWidth < mobile ? (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from russian-travel web-page"
+        src={russiaTravelThree}
+      />
+    ) : (
+      <img
+        className="caurosel__image"
+        alt="a screenshot from russian-travel web-page"
+        src={bigRussiaTravelThree}
+      />
+    ),
   ]);
+
   return (
     <section>
       <ul className="about-me__list">
@@ -101,7 +185,7 @@ function MyProjects({ language }) {
           <p className="about-me__text_type_small">
             {`${language ? "Screenshots" : "Скриншоты"}`}:
           </p>
-          <SecondSlider noPadding={true} elements={bigMovies} />
+          <SecondSlider elements={bigMovies} />
         </li>
         <li className="about-me about-me_type_no-list">
           <h3 className="about-me__title about-me__title_type_fat">Mesto</h3>
@@ -109,7 +193,7 @@ function MyProjects({ language }) {
             {`${
               language
                 ? "This project is an SPA. Here you can post cards containing images of various attractions (or any other pictures), add their names or signatures and give these cards likes. Every user's information is stored on the server to which REST requests are sent."
-                : "Данный проект является одностраничным веб-приложением. Здесь вы можете публиковать различные карточки с изображениями тех или иных мест (или с любыми другими картинками). Также можно добавлять карточкам названия и ставить лайки. Пользовательская информация, касающаяся учётной записи, опубликованных карточек и поставленных лайков хранится на NodeJS сервере, куда каждый раз с клиента посылаются REST запросы."
+                : "Данный проект является одностраничным веб-приложением. Здесь вы можете публиковать различные карточки с изображениями тех или иных мест (или с любыми другими картинками). Также можно добавлять карточкам названия и ставить лайки. Пользовательская информация, касающаяся учётной записи, опубликованных карточек и поставленных лайков, хранится на NodeJS сервере, куда каждый раз с клиента посылаются REST запросы."
             }`}
           </p>
           <p className="about-me__text">
@@ -154,8 +238,14 @@ function MyProjects({ language }) {
           <h3 className="about-me__title about-me__title_type_fat">
             Russian travel
           </h3>
-          <p className="about-me__text">{`${language ? "This is my very first web project. At its core, this is just an adaptive landing page without any scripts. Pure CSS. With it's help, I learned how to create adative layouts" : "Это мой самый первый веб-проект. По существу это всего лишь адаптивная лендинговая страничка, код которой не содержит скриптов. Тут только чистый CSS. Благодаря Russian travel я познакомился с медиа запросами и научился верстать адаптивно"}`}
-          .</p>
+          <p className="about-me__text">
+            {`${
+              language
+                ? "This is my very first web project. At its core, this is just an adaptive landing page without any scripts. Pure CSS. With it's help, I learned how to create adative layouts"
+                : "Это мой самый первый веб-проект. По существу это всего лишь адаптивная лендинговая страничка, код которой не содержит скриптов. Тут только чистый CSS. Благодаря Russian travel я познакомился с медиа запросами и научился верстать адаптивно"
+            }`}
+            .
+          </p>
           <p className="about-me__text">
             {`${language ? "Applied technologies" : "Используемые технологии"}`}
             :

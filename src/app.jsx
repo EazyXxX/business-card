@@ -9,12 +9,13 @@ import MyProjects from "./components/MyProjects";
 import Footer from "./components/Footer";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import FirstSlider from "./components/FirstSlider";
 
 function App() {
+  const location = useLocation();
   const [headerTopOpacity, setHeaderTopOpacity] = useState(false);
-  const [navAboutMeLocation, setNavAboutMeLocation] = useState(true);
+  const [navAboutMeLocation, setNavAboutMeLocation] = useState(false);
   const [navMyProjectsLocation, setNavMyProjectsLocation] = useState(false);
   const [language, setLanguage] = useState(true);
   const [mes, setMes] = useState([
@@ -34,6 +35,8 @@ function App() {
       src={meThree}
     />,
   ]);
+
+  const MOBILE_WIDTH = 800;
 
   function handleAboutMeClick() {
     setNavAboutMeLocation(true);
@@ -65,7 +68,15 @@ function App() {
   useEffect(() => {
     setLanguage(JSON.parse(window.localStorage.getItem("language")));
     setNavAboutMeLocation(JSON.parse(window.localStorage.getItem("aboutMe")));
-    setNavMyProjectsLocation(JSON.parse(window.localStorage.getItem("myProjects")));
+    setNavMyProjectsLocation(
+      JSON.parse(window.localStorage.getItem("myProjects"))
+    );
+  }, []);
+  useEffect(() => {
+    if (location.pathname === "/") {
+      setNavAboutMeLocation(false);
+      setNavMyProjectsLocation(false);
+    }
   }, []);
 
   return (
@@ -183,7 +194,7 @@ function App() {
         <Route path="/about-me" element={<AboutMe language={language} />} />
         <Route
           path="/my-projects"
-          element={<MyProjects language={language} />}
+          element={<MyProjects language={language} mobile={MOBILE_WIDTH} />}
         />
       </Routes>
       <Footer language={language} />
