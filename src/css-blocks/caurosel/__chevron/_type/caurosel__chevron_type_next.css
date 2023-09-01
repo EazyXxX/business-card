@@ -1,0 +1,23 @@
+.caurosel__chevron_type_next {
+  max-width: 30px;
+  max-height: 60px;
+  cursor: pointer;
+  transition: .1s;
+}
+
+.caurosel__chevron_type_next:hover {
+  opacity: 0.6;
+  transition: .1s;
+}
+
+@media screen and (max-width: 1000px) {
+  .caurosel__chevron_type_next {
+    display: hidden;
+    visibility: hidden;
+  }
+
+  .caurosel__chevron_type_next:hover {
+    opacity: none;
+    transition: none;
+  }
+}

@@ -1,0 +1,18 @@
+.caurosel__chevron {
+  cursor: pointer;
+  border-radius: 3rem;
+  padding: 5px;
+  transition: .1s;
+}
+
+.caurosel__chevron:hover {
+  background-color: rgba(255, 255, 255, 0.24);
+  transition: .1s;
+}
+
+@media screen and (max-width: 800px) {
+  .caurosel__chevron:hover {
+      background-color: rgba(255, 255, 255, 0.24);
+      transition: none;
+  }
+}
