@@ -1,7 +1,0 @@
-
-@media screen and (max-width: 800px) {
-  .header__button_type_active {
-    opacity: 1;
-    transition-delay: 1.5s;
-  }
-}

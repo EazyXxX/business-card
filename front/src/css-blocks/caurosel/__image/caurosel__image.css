@@ -1,9 +1,0 @@
-.caurosel__image {
-  contain: cover;
-  width: 97%;
-  height: 100%;
-  border-radius: 1rem;
-  margin: 20px auto auto auto;
-  box-shadow: rgba(0, 0, 0, 0.404) 2px 2px 2px 2px;
-  align-self: center;
-}
