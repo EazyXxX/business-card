@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import "./index.css";
-import meOne from "./images/me.png";
-import meTwo from "./images/hills.png";
-import meThree from "./images/rocks.png";
+import meOne from "./images/me.jpg";
+import meTwo from "./images/hills.jpg";
+import meThree from "./images/rocks.jpg";
 import GradientFlow from "./components/GradientFlow.js";
 import AboutMe from "./components/AboutMe";
 import MyProjects from "./components/MyProjects";

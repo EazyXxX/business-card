@@ -1,25 +1,25 @@
 import "../index.css";
 import SecondSlider from "./SecondSlider";
-import bigMoviesOne from "../images/movies-one.png";
-import bigMoviesTwo from "../images/movies-two.png";
-import bigMoviesThree from "../images/movies-three.png";
-import moviesOne from "../images/movies-one-mobile.png";
-import moviesTwo from "../images/movies-two-mobile.png";
-import moviesThree from "../images/movies-three-mobile.png";
+import bigMoviesOne from "../images/movies-one.jpg";
+import bigMoviesTwo from "../images/movies-two.jpg";
+import bigMoviesThree from "../images/movies-three.jpg";
+import moviesOne from "../images/movies-one-mobile.jpg";
+import moviesTwo from "../images/movies-two-mobile.jpg";
+import moviesThree from "../images/movies-three-mobile.jpg";
 
-import bigMestoOne from "../images/mesto-one.png";
-import bigMestoTwo from "../images/mesto-two.png";
-import bigMestoThree from "../images/mesto-three.png";
-import mestoOne from "../images/mesto-one-mobile.png";
-import mestoTwo from "../images/mesto-two-mobile.png";
-import mestoThree from "../images/mesto-three-mobile.png";
+import bigMestoOne from "../images/mesto-one.jpg";
+import bigMestoTwo from "../images/mesto-two.jpg";
+import bigMestoThree from "../images/mesto-three.jpg";
+import mestoOne from "../images/mesto-one-mobile.jpg";
+import mestoTwo from "../images/mesto-two-mobile.jpg";
+import mestoThree from "../images/mesto-three-mobile.jpg";
 
-import bigRussiaTravelOne from "../images/russia-one.png";
-import bigRussiaTravelTwo from "../images/russia-two.png";
-import bigRussiaTravelThree from "../images/russia-three.png";
-import russiaTravelOne from "../images/russia-one-mobile.png";
-import russiaTravelTwo from "../images/russia-two-mobile.png";
-import russiaTravelThree from "../images/russia-three-mobile.png";
+import bigRussiaTravelOne from "../images/russia-one.jpg";
+import bigRussiaTravelTwo from "../images/russia-two.jpg";
+import bigRussiaTravelThree from "../images/russia-three.jpg";
+import russiaTravelOne from "../images/russia-one-mobile.jpg";
+import russiaTravelTwo from "../images/russia-two-mobile.jpg";
+import russiaTravelThree from "../images/russia-three-mobile.jpg";
 
 import { useState } from "react";
 

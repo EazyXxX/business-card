@@ -6,8 +6,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import right from "../images/right.png";
-import left from "../images/left.png";
+import right from "../images/right.jpg";
+import left from "../images/left.jpg";
 
 function FirstSlider(elements) {
   return (

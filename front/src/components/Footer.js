@@ -1,6 +1,6 @@
 import "../index.css";
-import telegram from "../images/telegram_transparent.png";
-import github from "../images/github.png";
+import telegram from "../images/telegram_transparent.jpg";
+import github from "../images/github.jpg";
 
 function Footer({language}) {
   return (
