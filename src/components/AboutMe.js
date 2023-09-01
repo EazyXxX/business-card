@@ -14,8 +14,8 @@ function AboutMe({ language }) {
           <li className="about-me__text_type_small">
             {`${
               language
-                ? "My Skills:NodeJS + Express framework, MongoDB"
-                : "My Skills:NodeJS + Express фреймворк, MongoDB"
+                ? "NodeJS + Express framework, MongoDB"
+                : "NodeJS + Express фреймворк, MongoDB"
             }`}
           </li>
           <li className="about-me__text_type_small">Webpack + Babel</li>
