@@ -1,0 +1,52 @@
+.header__button {
+  transition: .1s;
+  border: none;
+  color: white;
+  background-color: transparent;
+  font-size: 21px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.header__button:hover {
+  transition: .1s;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 1200px) {
+  .header__button {
+    font-size: 23px;
+  }
+}
+
+.header__button:last-of-type {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 920px) {
+  .header__button {
+    font-size: 28px;
+  }
+  .header__button:hover {
+    transition: none;
+    opacity: none;
+  }
+
+  @media screen and (max-width: 800px) {
+    .header__button {
+      opacity: 0;
+      transition: 1s linear;
+      transition-property: opacity;
+      animation: textflow 5s linear infinite;
+    }
+  }
+
+  @keyframes textflow {
+    from {
+      background-position: 0% center;
+    }
+    to {
+      background-position: 200% center;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.about-me__text_type_small {
+  padding: 10px 0 10px 0;
+  margin: 0;
+  margin: 0 0 0 0;
+  font-size: 23px;
+}
+
+@media screen and (max-width: 800px) {
+  .about-me__text_type_small {
+    margin: 0 0 0 0;
+    padding: 10px 0 20px 0;
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .about-me__text_type_small {
+    font-size: medium;
+  }
+}

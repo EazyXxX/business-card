@@ -15,6 +15,10 @@ When developing this project, I used:
 
 This project is just a simple one-page landing. You can click buttons, swipe photos and screenshots, follow links. Text cannot be selected (except for e-mail).
 
+The initial code of this app is located inside the *front* folder.
+
+Actual link to my CV web-page: https://eazyxxx.github.io/business-card/
+
 
 *Ru*
 # Приветствую!
@@ -32,3 +36,7 @@ This project is just a simple one-page landing. You can click buttons, swipe pho
 * Структурирование кода и файлов по БЭМ и NESTED
 
 Данный проект по сути представляет собой простой одностраничный лендинг. Здесь можно клацать на кнопки, свайпать фотографии и скриншоты, переходить по ссылкам. Нельзя выделять текст (кроме эл. почты). 
+
+Изначальный код проекта находится в папке *front*.
+
+Актуальная ссылка на мой сайт-резюме: https://eazyxxx.github.io/business-card/
