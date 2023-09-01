@@ -1,6 +1,6 @@
 import "../index.css";
 import telegram from "../images/telegram_transparent.png";
-import linkedin from "../images/linkedin.png";
+import github from "../images/github.png";
 
 function Footer({language}) {
   return (
@@ -23,11 +23,11 @@ function Footer({language}) {
         <a
           rel="noreferrer"
           className="footer__link"
-          href="https://www.linkedin.com/in/olegostanin"
+          href="https://github.com/EazyXxX"
           target="_blank"
         >
-          <img className="footer__image" src={linkedin} alt="LinkedIn logo" />{" "}
-          <p className="footer__text">LinkedIn</p>
+          <img className="footer__image" src={github} alt="GitHub logo" />{" "}
+          <p className="footer__text">GitHub</p>
         </a>
       </div>
       <p className="footer__text">{`${
