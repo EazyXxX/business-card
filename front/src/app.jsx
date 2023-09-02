@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Route, Routes, useLocation } from "react-router-dom";
 import FirstSlider from "./components/FirstSlider";
+import StaticGradient from "./components/StaticGradient";
 
 function App() {
   const location = useLocation();
@@ -81,7 +82,7 @@ function App() {
 
   return (
     <div className="page">
-      <GradientFlow />
+      {window.innerWidth < MOBILE_WIDTH? <StaticGradient /> : <GradientFlow />}
       <header className="header">
         <h1
           className={`header__top ${

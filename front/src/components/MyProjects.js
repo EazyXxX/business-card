@@ -150,7 +150,7 @@ function MyProjects({ language, mobile }) {
 
   return (
     <section>
-      <ul className="about-me__list">
+      <ul className="about-me__list about-me__list_type_no-padding">
         <li className="about-me about-me_type_no-list">
           <h3 className="about-me__title about-me__title_type_fat">
             Movies explorer
