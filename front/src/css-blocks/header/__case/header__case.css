@@ -3,7 +3,7 @@
   flex-direction: row;
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1200px) {
   .header__case {
     background-color: rgb(0, 0, 0, 0.5);
     box-shadow: 4px 2px 2px rgb(0, 0, 0, 0.3);

@@ -6,29 +6,26 @@
 }
 
 @media screen and (max-width: 1900px) {
-  .header__container{
+  .header__container {
     margin: auto;
     max-width: 60%;
   }
 }
 
 @media screen and (max-width: 1500px) {
-  .header__container{
-    margin: auto;
+  .header__container {
     max-width: 50%;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .header__container{
-    margin: auto;
-    max-width: 40%;
+  .header__container {
+    max-width: 92%;
   }
 }
 
-@media screen and (max-width: 920px) {
-  .header__container{
-    margin: auto;
+@media screen and (max-width: 800px) {
+  .header__container {
     max-width: 100%;
   }
 }

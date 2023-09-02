@@ -19,6 +19,12 @@
   opacity: 0;
 }
 
+@media screen and (max-width: 370px) {
+  .app__color_type_cyan-purple {
+    min-height: 110vh;
+  }
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;

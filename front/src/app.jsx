@@ -82,7 +82,7 @@ function App() {
 
   return (
     <div className="page">
-      {window.innerWidth < MOBILE_WIDTH? <StaticGradient /> : <GradientFlow />}
+      {window.innerWidth < 1200? <StaticGradient /> : <GradientFlow />}
       <header className="header">
         <h1
           className={`header__top ${
@@ -158,13 +158,6 @@ function App() {
                   language
                     ? "Core skills: HTML, CSS, JavaScript, React, NodeJS"
                     : "Ключевые навыки: HTML, CSS, JavaScript, React, NodeJS"
-                }`}
-              </p>
-              <p className="header__text">
-                {`${
-                  language
-                    ? "Core principles: be agile; don't hesitate to ask for help; talk to customers; teamwork tendency; learning on a daily basis"
-                    : "Личностные качества: гибкое мышление; не стесняюсь задавать вопросы; люблю общаться с людьми; склонен к командной работе; обучаюсь новому ежедневно"
                 }`}
               </p>
             </div>

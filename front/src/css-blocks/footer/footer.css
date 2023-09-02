@@ -3,12 +3,11 @@
   width: 90vw;
   margin: 0 auto 0 auto;
   padding: 0 10px 0 10px;
-  border-radius: 10px 10px 0 0;
+  border-radius: 1rem 1rem 0 0;
 }
 
 @media screen and (max-width: 800px) {
   .footer {
-    border-radius: 6px 6px 0 0;
     margin-top: 36px;
   }
 }
