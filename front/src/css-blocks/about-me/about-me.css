@@ -8,6 +8,12 @@
   padding-right: 10px;
 }
 
+@media screen and (max-width: 1300px) {
+  .about-me {
+    max-width: calc(70vw - 20px);
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .about-me {
     max-width: calc(86vw - 20px);
